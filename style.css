@@ -1,117 +1,109 @@
-body{
-    background-color: #132043;
+body{ 
+    background-image: linear-gradient( 270.3deg,  rgba(84,212,228,1) 0.2%, rgba(68,36,164,1) 100% );
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
+    /* overflow: hidden; */
+}
+
+
+.content{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex-direction: column; /* Mengubah orientasi layout menjadi vertikal, pada icon media sosial */
+    text-align: center;
     height: 100vh;
 }
 
-
-article {
-    text-align: center;
-    margin-bottom: 20px;
+.content p{
+    color: #fff;
 }
 
-img{
+.about {
+    margin-bottom: 20px ;
+}
+.about p{
+    margin: 0;
+    padding: 40px;
+}
+
+.profile {
+    width: 100px;
+    overflow: hidden;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
     border: 5px solid #fff;
-    box-shadow: 0 0 10px rgb(from 0, 0 , 0 , 0.5) ;
-    margin-bottom: 20px;
-    margin-top: 50px;
-    /*  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
-}
-
-h1{
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1.5px;
-    color: #FDF0F0;
-    margin-top: 10px;
-}
-
-h5{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    color: #FDF0F0;
-    margin-top: -5px;
-}
-
-button{
-    padding: 8px;
-    margin-top: 10px;
-    margin-right: 10px;
-    background-color: #E9ECE1;
-    color: #132043;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    width: 150px;
-    height: 35px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    margin-bottom: 50px;
-}
-
-article button{
-    text-align: center
-}
-
-button:last-child{
-    margin-right: 0;
-}
-
-button:hover{
-    background-color: #FDF0F0;
-}
-
-footer{
-    text-align: center;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.1);;
+    /* flex-direction: column; */
+    /* untuk menempatkan profil di tengah */
+    
+    margin: 180px auto 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.social-icon{
-    margin-top: 60px;
+.profile img{
+    width: 100%;
+    border-radius: 50%;
+    display: block;
 }
 
-.social-icon i {
-    font-size: 24px;
-    margin: 0 10px;
+.author p {
+    margin-bottom: 30px;
+}
+
+.button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CBB17;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /*  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.button a:hover{
+    background-color: #45A314;
+}
+
+.icons{
+    position: fixed;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    display: flex;
+}
+
+.icons a{
+    margin: 0 12px;
+    display: block;
+}
+
+.icons img{
+    width: 20px;
+    height: auto;
+    max-height: 100%;
+    vertical-align: middle ;
 }
 
 
-/* CSS untuk perangkat dengan lebar layar lebih dari 600px */
-@media screen and (min-width: 600px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    article {
-        max-width: 600px; /* Sesuaikan lebar konten maksimum untuk perangkat lebih besar */
+/* Media query untuk perangkat dengan lebar kurang dari atau sama dengan 768px */
+@media screen and (max-width: 768px) {
+    .icons img {
+        width: 25px; /* Menetapkan lebar ikon menjadi lebih kecil pada perangkat kecil */
     }
 }
 
-/* CSS untuk perangkat dengan lebar layar lebih dari 900px */
-@media screen and (min-width: 900px) {
-    button {
-        font-size: 16px; /* Sesuaikan ukuran font tombol untuk perangkat lebih besar */
+@media screen and(max-width: 480px) {
+    .icons img{
+        width: 20px;
     }
+    
 }
-
-/* CSS untuk perangkat dengan lebar layar lebih dari 1200px */
-@media screen and (min-width: 1200px) {
-    .social-icons {
-        margin-top: 30px; /* Sesuaikan margin atas ikon sosial media untuk perangkat lebih besar */
+@media screen and(max-width:820px) {
+    .icons img{
+        width: 50px;
     }
+    
 }
