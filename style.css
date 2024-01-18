@@ -1,7 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body{ 
     background-image: linear-gradient( 270.3deg,  rgba(84,212,228,1) 0.2%, rgba(68,36,164,1) 100% );
     font-family: 'Poppins', sans-serif;
     margin: 0;
+    padding: 0;
     /* overflow: hidden; */
 }
 
@@ -11,7 +19,7 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .content p{
